@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .success-message {
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="username-input">Username:</label>
+                <input type="text" id="username-input" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email-input">Email:</label>
+                <input type="text" id="email-input" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password-input">Password:</label>
+                <input type="password" id="password-input" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password-input">Confirm Password:</label>
+                <input type="password" id="confirm-password-input" name="confirm-password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="register-button">Register</button>
+            </div>
+        </form>
+        <div class="success-message" id="success-message"></div>
+    </div>
+    <script>
+        // JavaScript code for form validation and submission goes here
+        const registrationForm = document.getElementById('registration-form');
+        const successMessage = document.getElementById('success-message');
+
+        registrationForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Validate form fields and perform registration logic
+            
+            // Display success message
+            successMessage.textContent = 'Registration successful!';
+        });
+    </script>
+</body>
+</html>
